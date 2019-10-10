@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+    <TextView
+        android:id="@+id/sign"
+        android:text="提示信息:5*5"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/sign"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@drawable/save"
+            android:onClick="Sava"/>
+        <TextView
+            android:text="保存"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Sava"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <view
+            android:id="@+id/blockView"
+            class="com.lxy.logicalblockdrawing.BlockViewEasy"
+            android:layout_width="400dp"
+            android:layout_height="400dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/up"
+                android:layout_marginLeft="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/up"
+                android:onClick="Move"/>
+            <Button
+                android:id="@+id/chooseFalse"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/judgefalse"
+                android:onClick="Choose"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+            <Button
+                android:id="@+id/left"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/left"
+                android:onClick="Move"/>
+            <Button
+                android:id="@+id/right"
+                android:layout_marginLeft="100dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/right"
+                android:onClick="Move"/>
+            <Button
+                android:id="@+id/chooseTrue"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="100dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/judgetrue"
+                android:onClick="Choose"/>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/down"
+            android:layout_below="@+id/choose"
+            android:layout_marginLeft="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/down"
+            android:onClick="Move"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginLeft="20px">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back"
+            android:onClick="isBack"/>
+        <TextView
+            android:text="Back"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="isBack"/>
+    </LinearLayout>
+
+</RelativeLayout>
